@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Tektur&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Lugrasimo&display=swap');
+
+        * {
+            margin: 0;
+            width: 0;
+            height: 100%;
+            width: 100%;
+        }
+
+        body {
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(180deg, hsla(292, 88%, 36%, 1) 0%, hsla(0, 0%, 0%, 1) 100%);
+            overflow-x: hidden;
+        }
+
+        #project_title {
+            width: 98%;
+            height: 80px;
+            margin: 10px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(12.5px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 50px;
+            font-family: 'Oswald', sans-serif;
+            position: relative;
+        }
+
+        .span {
+            position: absolute;
+            transform: translateX(50%);
+        }
+
+        .span:nth-child(1) {
+            color: transparent;
+            -webkit-text-stroke: .5px #03a9f4;
+        }
+
+        .span:nth-child(2) {
+            color: #03a9f4;
+            animation: animate 4s ease-in-out infinite;
+        }
+
+        @keyframes animate {
+
+            0%,
+            100% {
+                clip-path: polygon(0% 44%, 18% 29%, 43% 29%, 59% 48%, 74% 54%, 88% 42%, 99% 29%, 99% 99%, 0% 100%);
+            }
+
+            50% {
+                clip-path: polygon(0% 44%, 16% 63%, 27% 53%, 44% 40%, 63% 24%, 79% 25%, 100% 44%, 99% 99%, 0% 100%);
+            }
+        }
+
+        #main {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            height: 550px;
+        }
+
+        .card {
+            position: relative;
+            align-items: center;
+            position: relative;
+            height: 550px;
+            width: 450px;
+            background-position: center;
+            background-size: cover;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all .5s linear;
+        }
+
+        .picture,
+        .txt {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+        }
+
+        #tic-tac-toe {
+            background-image: url("tic.jpeg");
+            background-position: 46%;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .txt {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(5px);
+            transform: translateY(85%);
+            transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .txt_title {
+            margin-top: 10px;
+            height: 60px;
+            font-size: 50px;
+            font-family: 'Tektur', cursive;
+            color: #B5076B;
+        }
+
+        .txt_content {
+            font-family: 'Lugrasimo', cursive;
+            font-size: 20px;
+        }
+
+        .card:hover .txt {
+            transform: translateY(60%);
+            cursor: pointer;
+        }
+
+        .card:hover {
+            box-shadow: 2px 2px 20px pink;
+        }
+
+        #site {
+            background-image: url("site.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .land_title {
+            font-size: 30px;
+        }
+
+        .land_content {
+            color: red;
+        }
+
+        #stephan {
+            background-image: url("stephan.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="project_title">
+        <span class="span">Projects</span>
+        <span class="span">Projects</span>
+    </div>
+    <div id="main">
+        <div class="card">
+            <a href="https://tic-tac-toe.techshock.repl.co/" target="_blank">
+                <div class="picture" id="tic-tac-toe"></div>
+                <div class="txt">
+                    <span class="txt_title">
+                        TIC TAC TOE
+                    </span>
+                    <span class="txt_content">
+                        This is an basic two player TIC-TAC-TOE game made by me on very initial stage .
+                    </span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="https://harshil000.github.io/clothing-brand/" target="_blank">
+                <div class="picture" id="site"></div>
+                <div class="txt">
+                    <span class="txt_title land_title">
+                        Landing page for clothing brand
+                    </span>
+                    <span class="txt_content land_content">
+                        This is first site which i made by giving it proper time and made best compared to all my
+                        previous projects
+                    </span>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="https://harshil000.github.io/Stephan-Hawking-s/" target="_blank">
+                <div class="picture" id="stephan"></div>
+                <div class="txt">
+                    <span class="txt_title land_title">
+                        About stephan Hawking
+                    </span>
+                    <span class="txt_content land_content">
+                        This was for my school project .
+                    </span>
+                </div>
+            </a>
+        </div>
+    </div>
+</body>
+<script>
+    let site = document.getElementById("site")
+    site.addEventListener("click", () => {
+        // location.replace("https://harshil000.github.io/clothing-brand/");
+    })
+</script>
+
+</html>
