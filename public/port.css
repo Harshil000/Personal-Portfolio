@@ -18,6 +18,10 @@ body {
     background: linear-gradient(180deg, #00114D 0%, rgba(0, 2, 9, 0.87) 96.88%);
 }
 
+body::-webkit-scrollbar {
+    display : none ;
+}
+
 nav {
     box-sizing: border-boxs;
     margin: 10px;
